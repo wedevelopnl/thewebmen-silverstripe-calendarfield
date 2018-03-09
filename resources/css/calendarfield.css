@@ -1,0 +1,67 @@
+.fc-view-container {
+    background: #FFF;
+}
+
+.fc-event-container {
+    color: #FFF;
+}
+.fc-event-container > * {
+    padding: 5px;
+}
+.fc-event {
+    background: #005a93;
+    border-color: #005a93;
+    cursor: pointer;
+}
+
+.fc-unthemed td.fc-today {
+    background: #e9f0f4;
+}
+
+th.fc-day-header {
+    padding: 5px;
+}
+
+.fc-left h2 {
+    text-transform: capitalize;
+}
+
+.fc-button {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .3846rem .7692rem;
+    font-size: 1rem;
+    line-height: 1.5384;
+    border-radius: .23rem;
+    background: #005a93;
+    text-shadow: none;
+    color: #FFF;
+}
+.fc-button:hover {
+    background: #004e7f;
+}
+
+.fc-button-group .fc-button:not(:first-child):not(:last-child) {
+    border-radius: 0;
+}
+.fc-button-group .fc-button:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.fc-button-group .fc-button:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.fc-state-disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+}

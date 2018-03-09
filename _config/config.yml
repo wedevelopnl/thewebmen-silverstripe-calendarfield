@@ -1,0 +1,7 @@
+---
+Name: calendarfield
+---
+
+SilverStripe\Forms\GridField\GridFieldDetailForm_ItemRequest:
+  extensions:
+    - TheWebmen\CalendarField\Extensions\GridFieldDetailForm_ItemRequestExtension
