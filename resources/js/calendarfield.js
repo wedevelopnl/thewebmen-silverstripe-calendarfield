@@ -55,7 +55,7 @@
         });
 
         //Re render fix
-        $('.ss-tabset').on('tabsactivate', function(){
+        $('.ss-tabset, .cms-tabset').on('tabsactivate', function(){
           if(_this.is(':visible')){
             _this.fullCalendar('render');
           }
