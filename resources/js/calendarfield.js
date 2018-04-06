@@ -32,11 +32,15 @@
           },
 
           dayClick: function (date, jsEvent, view) {
-            window.location = _this.data('addnewurl') + '?' + _this.data('startdate-field') + '=' + date.format();
+            if (_this.data('addnewurl')) {
+                window.location = _this.data('addnewurl') + '?' + _this.data('startdate-field') + '=' + date.format();
+            }
           },
 
           eventClick: function(calEvent, jsEvent, view) {
-            window.location = calEvent.editlink;
+            if (calEvent.editlink) {
+                window.location = calEvent.editlink;
+            }
           },
 
           eventDrop: function(event, delta, revertFunc) {

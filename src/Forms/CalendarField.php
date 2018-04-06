@@ -84,6 +84,9 @@ class CalendarField extends GridField
      * @return string
      */
     public function AddNewLink(){
+        if (!singleton($this->getModelClass())->canCreate()) {
+            return false;
+        }
         return Controller::join_links($this->Link('item'), 'new');
     }
 
@@ -99,12 +102,13 @@ class CalendarField extends GridField
 
         $out = [];
         foreach($list as $listItem){
+            $editLink = singleton($this->getModelClass())->canEdit() ? Controller::join_links($this->Link('item'), $listItem->ID, 'edit') : false
             $out[] = [
                 'id' => $listItem->ID,
                 'title' => $listItem->getTitle(),
                 'start' => $listItem->Date,
                 'startEditable' => true,
-                'editlink' => Controller::join_links($this->Link('item'), $listItem->ID, 'edit')
+                'editlink' => $editLink
             ];
         }
 
