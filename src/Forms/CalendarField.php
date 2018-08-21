@@ -40,12 +40,6 @@ class CalendarField extends GridField
 
         $config = GridFieldConfig_RecordEditor::create();
         parent::__construct($name, $title, $dataList, $config);
-
-        Requirements::css('https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css');
-        Requirements::css('thewebmen/silverstripe-calendarfield:resources/css/calendarfield.css');
-        Requirements::javascript('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment-with-locales.min.js');
-        Requirements::javascript('https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js');
-        Requirements::javascript('thewebmen/silverstripe-calendarfield:resources/js/calendarfield.js');
     }
 
     /**
@@ -69,6 +63,12 @@ class CalendarField extends GridField
      */
     public function Field($properties = array())
     {
+        Requirements::css('https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css');
+        Requirements::css('thewebmen/silverstripe-calendarfield:resources/css/calendarfield.css');
+        Requirements::javascript('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment-with-locales.min.js');
+        Requirements::javascript('https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js');
+        Requirements::javascript('thewebmen/silverstripe-calendarfield:resources/js/calendarfield.js');
+        
         $context = $this;
 
         $this->extend('onBeforeRender', $context, $properties);
